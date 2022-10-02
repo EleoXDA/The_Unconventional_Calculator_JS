@@ -9,5 +9,3 @@ currentResult = currentResult / 8;
 
 alert(currentResult);
 alert(userInput)
-
-
