@@ -1,11 +1,10 @@
 const defaltResult = 0;
 let currentResult = defaltResult;
-let userInputValue = 10;
 
-currentResult = userInputValue + 18;
-currentResult = currentResult - 10;
-currentResult = currentResult * 2;
-currentResult = currentResult / 8;
+function addition(num1, num2) {
+  const result = num1 + num2;
+  alert("The result is " + result);
+}
 
-alert(currentResult);
-alert(userInputValue)
+addition(1, 2);
+addition(5, 5);
