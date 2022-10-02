@@ -8,3 +8,9 @@ function addition(num1, num2) {
 
 addition(1, 2);
 addition(5, 5);
+
+currentResult = ((currentResult + 10) * 3) / 2 - 1;
+
+let calculationDescription = `(${defaltResult} + 10) * 3 / 2 - 1`;
+
+outputResult(currentResult, calculationDescription);
