@@ -7,7 +7,7 @@ function functwo(name) {
 };
 
 funcone();
-functwo(Mark);
+functwo('Mark');
 
 const task3Element = document.getElementById('task-3');
 
