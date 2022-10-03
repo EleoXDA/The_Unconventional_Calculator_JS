@@ -1,8 +1,8 @@
 const defaltResult = 0;
 let currentResult = defaltResult;
 
-function addition(num1, num2) {
-  const result = num1 + num2;
+function addition() {
+  const result = currentResult + userInput.value;
   return result;
 }
 
