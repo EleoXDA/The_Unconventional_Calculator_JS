@@ -5,6 +5,11 @@ function getUserNumberInput() {
   return parseInt(userInput.value);
 }
 
+function createAndWriteOutput(operator, resultBeforeCalculation, calculationNumber) {
+  const calcDescription = `${resultBeforeCalculation} ${operator} ${calculationNumber}`;
+  outputResult(currentResult, calcDescription);
+}
+
 function addition() {
   const enteredNumber = getUserNumberInput();
   const calcDescription = `${currentResult} + ${enteredNumber}`; // it implicitly converts the value to string 
