@@ -5,3 +5,6 @@ function funcone() {
 function functwo(name) {
     alert(name)
 };
+
+funcone();
+functwo(Mark);
