@@ -2,8 +2,7 @@ const defaltResult = 0;
 let currentResult = defaltResult;
 
 function addition() {
-  const result = currentResult + userInput.value;
-  return result;
+  currentResult = currentResult + userInput.value;
 }
 
 addBtn.addEventListener("click", add);
