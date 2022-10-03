@@ -6,5 +6,5 @@ function addition() {
   outputResult(currentResult, '');
 }
 
-addBtn.addEventListener("click", add);
+addBtn.addEventListener("click", addition);
 
