@@ -24,5 +24,19 @@ function subtraction() {
   createAndWriteOutput('-', initialResult, enteredNumber);
 }
 
+function multiplication() {
+  const enteredNumber = getUserNumberInput();
+  const initialResult = currentResult;
+  currentResult = currentResult * enteredNumber;
+  createAndWriteOutput('*', initialResult, enteredNumber);
+}
+
+function division() {
+  const enteredNumber = getUserNumberInput();
+  const initialResult = currentResult;
+  currentResult = currentResult / enteredNumber;
+  createAndWriteOutput('/', initialResult, enteredNumber);
+}
+
 addBtn.addEventListener("click", addition);
 
