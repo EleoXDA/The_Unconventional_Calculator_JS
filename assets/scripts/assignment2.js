@@ -16,3 +16,5 @@ task3Element.addEventListener('click', funcone);
 function functhree(name,name,name){
   return name+name+name;
 }
+
+alert(functhree('Mark','Mark','Mark'));
