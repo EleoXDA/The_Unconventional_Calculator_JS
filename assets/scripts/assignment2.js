@@ -13,8 +13,9 @@ const task3Element = document.getElementById('task-3');
 
 task3Element.addEventListener('click', funcone);
 
-function functhree(name,name,name){
-  return name+name+name;
+function functhree(name1,name2,name3){
+  return name1+name2+name3;
+  // return `${name1} ${name2} ${name3}`;
 }
 
-alert(functhree('Mark','Mark','Mark'));
+alert(functhree('Mark','Marc','Marque'));
