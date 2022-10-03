@@ -2,7 +2,7 @@ const defaltResult = 0;
 let currentResult = defaltResult;
 
 function addition() {
-  currentResult = currentResult + userInput.value;
+  currentResult = currentResult + parseInt(userInput.value);
   outputResult(currentResult, '');
 }
 
