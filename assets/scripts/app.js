@@ -1,5 +1,6 @@
 const defaltResult = 0;
 let currentResult = defaltResult;
+let logEntries = [];
 
 function getUserNumberInput() {
   return parseInt(userInput.value);
