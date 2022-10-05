@@ -37,7 +37,6 @@ function addition() {
   currentResult += enteredNumber;
   createAndWriteOutput('+', initialResult, enteredNumber);
   writeToLog('addition', initialResult, enteredNumber, currentResult);
-  logEntries.push(logEntry);
 }
 
 function subtraction() {
