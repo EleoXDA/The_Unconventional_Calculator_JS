@@ -23,6 +23,7 @@ function addition() {
     result: currentResult
   };
   logEntries.push(logEntry);
+  console.log(logEntries.operation);
   console.log(logEntries);
 }
 
