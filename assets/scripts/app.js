@@ -23,8 +23,6 @@ function addition() {
     result: currentResult
   };
   logEntries.push(logEntry);
-  console.log(logEntries.operation);
-  console.log(logEntries);
 }
 
 function subtraction() {
@@ -32,6 +30,12 @@ function subtraction() {
   const initialResult = currentResult;
   currentResult -= enteredNumber;
   createAndWriteOutput('-', initialResult, enteredNumber);
+  const logEntry = {
+    operation: 'subtraction',
+    previousResult: initialResult,
+    number: enteredNumber,
+    result: currentResult
+  };
 }
 
 function multiplication() {
@@ -39,6 +43,12 @@ function multiplication() {
   const initialResult = currentResult;
   currentResult *= enteredNumber;
   createAndWriteOutput('*', initialResult, enteredNumber);
+  const logEntry = {
+    operation: 'multiplication',
+    previousResult: initialResult,
+    number: enteredNumber,
+    result: currentResult
+  };
 }
 
 function division() {
@@ -46,6 +56,12 @@ function division() {
   const initialResult = currentResult;
   currentResult /= enteredNumber;
   createAndWriteOutput('/', initialResult, enteredNumber);
+  const logEntry = {
+    operation: 'division',
+    previousResult: initialResult,
+    number: enteredNumber,
+    result: currentResult
+  };
 }
 
 addBtn.addEventListener("click", addition);
