@@ -6,9 +6,29 @@ function getUserNumberInput() {
   return parseInt(userInput.value);
 }
 
-function createAndWriteOutput(operator, resultBeforeCalculation, calculationNumber) {
+function createAndWriteOutput(
+  operator,
+  resultBeforeCalculation,
+  calculationNumber
+) {
   const calcDescription = `${resultBeforeCalculation} ${operator} ${calculationNumber}`;
   outputResult(currentResult, calcDescription);
+}
+
+function writeToLog(
+  operationIdentifier,
+  prevResult,
+  operationNumber,
+  newResult
+) {
+  const logEntry = {
+    operation: operationIdentifier,
+    previousResult: prevResult,
+    number: operationNumber,
+    result: newResult,
+  };
+  logEntries.push(logEntry);
+  console.log(logEntries);
 }
 
 function addition() {
@@ -16,12 +36,7 @@ function addition() {
   const initialResult = currentResult;
   currentResult += enteredNumber;
   createAndWriteOutput('+', initialResult, enteredNumber);
-  const logEntry = {
-    operation: 'addition',
-    previousResult: initialResult,
-    number: enteredNumber,
-    result: currentResult
-  };
+  writeToLog('addition', initialResult, enteredNumber, currentResult);
   logEntries.push(logEntry);
 }
 
@@ -30,12 +45,8 @@ function subtraction() {
   const initialResult = currentResult;
   currentResult -= enteredNumber;
   createAndWriteOutput('-', initialResult, enteredNumber);
-  const logEntry = {
-    operation: 'subtraction',
-    previousResult: initialResult,
-    number: enteredNumber,
-    result: currentResult
-  };
+  writeToLog('subtraction', initialResult, enteredNumber, currentResult);
+
 }
 
 function multiplication() {
@@ -43,12 +54,7 @@ function multiplication() {
   const initialResult = currentResult;
   currentResult *= enteredNumber;
   createAndWriteOutput('*', initialResult, enteredNumber);
-  const logEntry = {
-    operation: 'multiplication',
-    previousResult: initialResult,
-    number: enteredNumber,
-    result: currentResult
-  };
+  writeToLog('multiplication', initialResult, enteredNumber, currentResult);
 }
 
 function division() {
@@ -56,16 +62,10 @@ function division() {
   const initialResult = currentResult;
   currentResult /= enteredNumber;
   createAndWriteOutput('/', initialResult, enteredNumber);
-  const logEntry = {
-    operation: 'division',
-    previousResult: initialResult,
-    number: enteredNumber,
-    result: currentResult
-  };
+  writeToLog('division', initialResult, enteredNumber, currentResult);
 }
 
-addBtn.addEventListener("click", addition);
-subtractBtn.addEventListener("click", subtraction);
-multiplyBtn.addEventListener("click", multiplication);
-divideBtn.addEventListener("click", division);
-
+addBtn.addEventListener('click', addition);
+subtractBtn.addEventListener('click', subtraction);
+multiplyBtn.addEventListener('click', multiplication);
+divideBtn.addEventListener('click', division);
