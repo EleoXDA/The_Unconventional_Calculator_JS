@@ -32,6 +32,23 @@ function writeToLog(
 }
 
 function calculateResult(calculationType) {
+  if (
+    calculationType !== 'ADD' &&
+    calculationType !== 'SUBTRACT' &&
+    calculationType !== 'MULTIPLY' &&
+    calculationType !== 'DIVIDE' ||
+    !enteredNumber
+  ) {
+    return;
+  }
+
+  // if (
+  //   calculationType === 'ADD' ||
+  //   calculationType === 'SUBTRACT' ||
+  //   calculationType === 'MULTIPLY' ||
+  //   calculationType === 'DIVIDE'
+  // ) { -----------------------------> this was not chosen because it requires a lot of nested if codes
+
   const enteredNumber = getUserNumberInput();
   const initialResult = currentResult;
   let mathOperator;
